@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - Basically just the entry point of the whole program
  *
@@ -12,7 +13,7 @@ int main(void)
 	 * Using printf to print the message followed by a new line
 	 *
 	 */
-	printf("with proper grammar, but the outcome is a piece of art,\n"
+	printf("with proper grammar, but the outcome is a piece of art,\n");
 
-	return (0)
+	return (0);
 }
