@@ -12,5 +12,6 @@ int main(void)
 	 * Puts is another way to print the message
 	 */
 	puts("\"Programming is like building a multilingual puzzle");
+
 	return (0);
 }
