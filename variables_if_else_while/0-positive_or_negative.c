@@ -3,13 +3,12 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/*
- * main - entry point
+/**
+ * main - this is the entry point of the program
  *
  * Description - program to describe n as +,- or =
  *
- * Return 0 (If 0 then success)
- *
+ * Return: 0 (If 0 then success)
  */
 int main(void)
 {
