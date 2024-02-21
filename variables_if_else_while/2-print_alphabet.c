@@ -2,7 +2,7 @@
 /**
  * main - use putchar to output a to z in lowercase
  *
- * return: 0 
+ * Return: always 0
  */
 int main(void)
 {
