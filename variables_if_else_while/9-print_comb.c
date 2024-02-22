@@ -6,16 +6,18 @@
  */
 int main(void)
 {
-int n = '0';
-int c = ',';
-int s = ' ';
+int n; 
 
-for (n = '0'; n <= '9'; n = n + 1)
+for (n = '0'; n <= '9'; n++)
 {
 putchar(n);
-putchar(c);
-putchar(s);
+if (n != '9')
+{
+putchar(',');
+putchar(' ');
+}
 }
 putchar('\n');
+
 return (0);
 }
