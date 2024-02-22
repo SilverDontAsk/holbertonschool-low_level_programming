@@ -10,10 +10,10 @@ char ch = 'a';
 char n = '0';
 
 for (n = '0'; n <= '9'; n++)
-for (ch = 'a'; ch <= 'f'; ch++)
 {
 putchar(n);
 }
+for (ch = 'a'; ch <= 'f'; ch++)
 {
 putchar(ch);
 }
