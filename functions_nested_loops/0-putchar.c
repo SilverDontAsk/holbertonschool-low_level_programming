@@ -6,8 +6,8 @@
  *
  * Return: Always 0
  */
-int print_putchar(void)
+int main(void)
 {
-_putchar();
+printPutchar();
 return (0);
 }
