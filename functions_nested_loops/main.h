@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 void print_putchar() {
-	printf("_putchar\n");
+char pchar[8] = "_putchar";
+puts(pchar);
 }
 #endif
