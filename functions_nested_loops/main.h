@@ -2,7 +2,7 @@
 #define MAIN_H
 #include <stdio.h>
 
-void printPutchar() {
+void _putchar() {
 	printf("_putchar\n");
 }
 #endif
