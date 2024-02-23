@@ -1,5 +1,6 @@
 #ifndef main.h
 #define main.h
 
-void putchar(void);
+void print_putchar(void);
+
 #endif
