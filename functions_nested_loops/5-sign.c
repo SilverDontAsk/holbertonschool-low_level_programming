@@ -1,7 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 #include <ctype.h>
-
+/**
+ * print_sign - prints sign of the number
+ *
+ * @n: what will be checked
+ *
+ * Return: + if greater than 0, 0 if 0, - for anythin else
+ */
 int print_sign(int n)
 {
 if (n > 0)
