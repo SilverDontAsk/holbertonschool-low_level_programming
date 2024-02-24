@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
- * int _isalpha - checks for letters, lowercase or uppercase
+ * _isalpha - checks for letters, lowercase or uppercase
  *
  * @c: variable that will be checked
  *
