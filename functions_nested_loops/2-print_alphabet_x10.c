@@ -12,20 +12,12 @@ int i;
 
 for( i=0; i < 10; i++)
 {
-for (ch = 'a'; ch <= 'z'; ch++)
+ch = 'a';
+while (ch <= 'z')
+{
 _putchar(ch);
+ch++;
+}
 _putchar('\n');
 }
-}
-/**
- * main - entry point of the program
- *
- * Description: entry point of the program. call print_alphabet_x10 function and returns 0 if sucess
- *
- * Return: Always 0
- */
-int main()
-{
-print_alphabet_x10();
-return (0);
 }
