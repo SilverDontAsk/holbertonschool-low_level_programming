@@ -5,8 +5,7 @@
 int main(void)
 {
 	char ch = 'o';
-{
-	if ( _islower(c))
+	if ( _islower(ch))
 	{
 		_putchar('1');
 	}
@@ -15,6 +14,5 @@ int main(void)
 		_putchar('0');
 	}
 	_putchar('\n');
-
 	return (0);
 }
