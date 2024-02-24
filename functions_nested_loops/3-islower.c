@@ -4,19 +4,18 @@
 /**
  * _islower - checks for lowercase character
  *
- * @c - is the character that will be checked
+ * @c: character that will be checked
  *
- * Return 1 if lowercase character or 0 if uppercase
+ * Return: 1 if lowercase character or 0 if uppercase
  */
 int _islower(int c)
-
 {
-if ((c >= 0  && c <= 108) || (c >= 'a' && c <= 'z'))
+if ((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9'))
 {
-return(1);
-} else if (c >= 'A' && c <= 'Z')
-{
-return(0);
+return (1);
 }
-return(0);
+else
+{
+return (0);
+}
 }
