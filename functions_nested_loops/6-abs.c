@@ -11,9 +11,7 @@ int _abs(int c)
 {
 if (c < 0)
 {
-int cal_abs;
-cal_abs = c * -1;
-return (cal_abs);
+return (c * -1);
 }
-return (0);
+return (c);
 }
