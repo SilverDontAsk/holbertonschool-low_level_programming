@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _print_last_digit - print the last digit of any number
+ * print_last_digit - print the last digit of any number
  * @n: this is the number that will be worked on
  * Return: last digit of the number worked on
  */
