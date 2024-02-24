@@ -2,9 +2,15 @@
 #include <stdio.h>
 /**
  * print_alphabet_x10 - print out the alphabet 10 times
+ * 
+ * main - entry point of program
  *
  * Return: void
 */
+int _putchar(char c)
+{
+	return putchar(c);
+}
 void print_alphabet_x10(void)
 {
         char ch;
