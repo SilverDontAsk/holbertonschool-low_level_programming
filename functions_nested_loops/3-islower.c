@@ -1,10 +1,12 @@
 #include "main.h"
 #include <stdio.h>
+#include <ctype.h>
 
 int main(void)
 {
-	char ch = 'c';
-	if (_islower(ch) != 0)
+	char ch = 'o';
+{
+	if ( _islower(c))
 	{
 		_putchar('1');
 	}
