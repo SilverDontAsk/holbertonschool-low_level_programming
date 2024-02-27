@@ -1,9 +1,6 @@
 #include <stdio.h>
 /**
- * main - entry point of the program
- * @f: fizz if multiple of 3
- * @b: buzz if multiple of 5
- * @g: fizzbuzz if both
+ * main - count 1 to 100 and replace multiples of 3 with fizz, 5 with buzz
  * Return: always 0
  */
 int main(void)
@@ -12,7 +9,7 @@ int n;
 n = 100;
 for (n = 1; n <= 100; n++)
 {
-if (n % 3 == 0 && n % 5 ==0)
+if (n % 3 == 0 && n % 5 == 0)
 {
 printf("FizzBuzz");
 }
