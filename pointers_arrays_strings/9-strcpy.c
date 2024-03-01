@@ -8,7 +8,13 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-_strcpy(dest, src);
-_putchar(*dest);
-return (dest);
+char *start = dest;
+while (*src != '\0')
+{
+*dest = *src;
+dest++;
+src++;
+}
+*dest = '\0';
+return start;
 }
