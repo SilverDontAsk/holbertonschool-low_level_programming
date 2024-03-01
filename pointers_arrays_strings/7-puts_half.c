@@ -2,20 +2,21 @@
 #include <string.h>
 /**
  * puts_half - print half of a string
- * @str - string to be printed in half
+ * @str:string to be printed in half
+ * Return: half the string
  */
 void puts_half(char *str)
 {
 int l = 0;
 int n;
-while (str[l] !='\0')
+while (str[l] != '\0')
 {
 l++;
 }
-if ( l % 2 == 1)
+if (l % 2 == 1)
 {
-n = (l -1) / 2;
-n +=1;
+n = (l - 1) / 2;
+n += 1;
 }
 else
 {
