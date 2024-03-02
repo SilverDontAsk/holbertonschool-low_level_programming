@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdbool.h>
+#include <string.h>
 /**
  * cap_string - capitalizes all words of a string
  * @str: string to be changed
@@ -7,26 +7,18 @@
  */
 char *cap_string(char *str)
 {
-char *ptr = str;
-bool firs_wor = true;
-while (*ptr != '\0')
+int i = 0;
+char separators[] = " \t\n,;.!?\"(){}[]";
+while (str[i])
 {
-if ((*ptr >= 'a' && *ptr <= 'z') || (*ptr > 'A' && *ptr <= 'Z'))
+if (str[i] >= 'a' && str[i] <= 'z')
 {
-if (firs_wor)
-{
-if (*ptr >= 'a' && *ptr <= 'z')
-{
-*ptr = *ptr - 32;
+	if (i == 0 || strchr(separators, str[i - 1]))
+	{
+		str[i] -= 32;
+	}
 }
-firs_wor = false;
-}
-}
-else
-{
-firs_wor = true;
-}
-ptr++;
+i++;
 }
 return (str);
 }
