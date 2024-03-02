@@ -6,20 +6,18 @@
  */
 char *leet(char *s)
 {
-char *ptr = s;
-while (*ptr)
+int l, n;
+char ls[] = "aAeEoOtTlL";
+char ns[] = "4433007711";
+for (l = 0; s[l] != '\0'; l++)
 {
-	if (*ptr == 'e' || *ptr == 'E')
-		*ptr = '3';
-	else if (*ptr == 'a' || *ptr == 'A')
-		*ptr = '4';
-	else if (*ptr == 'o' || *ptr == 'O')
-		*ptr = '0';
-	else if (*ptr == 't' || *ptr == 'T')
-		*ptr = '7';
-	else if (*ptr == 'l' || *ptr =='L')
-		*ptr = '1';
-	ptr++;
+	for (n = 0; n < 10; n++)
+	{
+		if (s[l] == ls[n])
+		{
+			s[l] = ns[n];
+		}
+	}
 }
 return (s);
 }
