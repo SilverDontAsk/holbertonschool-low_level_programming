@@ -9,9 +9,37 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-char *rst = malloc(strlen(s1) + strlen(s2) + 1);
-int n, i = 0;
-for (n = 0; (rst[i] = s1[n]) != '\0'; ++n, ++i) {}
-for (n = 0; (rst[i] = s2[n]) != '\0'; ++n, ++i) {}
-return (rst);
+int lens1;
+int lens2;
+int i, p;
+char *res;
+if (s1 == NULL || s2 == NULL)
+{
+	return (NULL);
+}
+lens1 = 0;
+while (s1[lens1] != '\0')
+{
+	lens1++;
+}
+lens2 = 0;
+while (s2[lens2] != '\0')
+{
+	lens2++;
+}
+res = (char *)malloc((lens1 + lens2 + 1) * sizeof(char));
+if (res == NULL)
+{
+	return (NULL);
+}
+for (i = 0; i < lens1; i++)
+{
+	res[i] = s1[i];
+}
+for (p = 0; p < lens2; p++)
+{
+	res[i + p] = s2[p];
+}
+res[i + p] = '\0';
+return (res);
 }
