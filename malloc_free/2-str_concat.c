@@ -21,7 +21,7 @@ while (s1[len1])
 while (s2[len2])
 	len2++;
 j = len1 + len2;
-res = malloc((sizeof(char) * j) + 1);
+res = malloc((sizeof(char) * j) +1);
 if (res == NULL)
 	return (NULL);
 len2 = 0;
