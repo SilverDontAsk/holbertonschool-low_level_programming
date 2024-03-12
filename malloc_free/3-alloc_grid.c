@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * alloc_grind - allocates space for a grid
+ * alloc_grid - allocates space for a grid
  * @width: gets the width of the grid
  * @height: gets the height of the grid
  * Return: null if failure, or if width or height is 0 or less
