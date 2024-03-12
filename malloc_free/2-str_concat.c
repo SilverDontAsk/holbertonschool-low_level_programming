@@ -13,6 +13,7 @@ int lens1;
 int lens2;
 int i, p;
 char *res;
+res = malloc(sizeof(char) * (lens1 + lens2 + 1));
 if (s1 != NULL)
 {
 while (s1[lens1])
@@ -23,7 +24,6 @@ if (s2 != NULL)
 while (s2[lens2])
 lens2++;
 }
-res = malloc(sizeof(char) * (lens1 + lens2 +1));
 if (res == NULL)
 {
 return (NULL);
