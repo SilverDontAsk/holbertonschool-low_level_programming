@@ -8,15 +8,15 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *io;
-	unsigned int totsize, i;
-	if (size == 0 || nmemb == 0)
-		return (NULL);
-	totsize = nmemb * size;
-	io = malloc(totsize);
-	if (io == NULL)
-		return (NULL);
-	for (i = 0; i < totsize; i++)
-		*((char *)io + i) = 0;
-	return (io);
+void *io;
+unsigned int totsize, i;
+if (size == 0 || nmemb == 0)
+return (NULL);
+totsize = nmemb * size;
+io = malloc(totsize);
+if (io == NULL)
+return (NULL);
+for (i = 0; i < totsize; i++)
+*((char *)io + i) = 0;
+return (io);
 }
