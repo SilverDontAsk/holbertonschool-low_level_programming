@@ -15,7 +15,6 @@ char *name; /* name of dog */
 float age; /* age of dog */
 char *owner; /* address of dog owner */
 } dog_t;
-{
 int _putchar(char c);
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
