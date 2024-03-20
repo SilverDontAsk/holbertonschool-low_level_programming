@@ -14,25 +14,27 @@ int num2;
 char *operator;
 int calc;
 int (*f)(int, int);
-if (argc == 4)
+if (argc != 4)
 {
 printf("Error\n");
-return (98);
+exit (98);
 }
 num1 = atoi(argv[1]);
 operator = argv[2];
 num2 = atoi(argv[3]);
-(*f)(int, int) = get_op_func(operator);
-if (operator == "/" || operator == "%", num1 == 0 || num2 == 0)
-{
-	printf("Error\n");
-	return (100);
-}
-if (operator != ["+","-","*","/","%"])
+
+f = get_op_func(operator);
+if (f == NULL)
 {
 printf("Error\n");
-return (99);
+exit (99);
 }
-calc = f(num1, num2);
-return (calc);
+if (num2 == 0 && (*operator == '/' || *operator == '%'))
+{
+printf("Error\n");
+exit (100);
+}
+calc = (*f)(num1, num2);
+printf("%d\n", calc);
+return (0);
 }
