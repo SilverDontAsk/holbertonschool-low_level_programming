@@ -8,11 +8,9 @@
  */
 int main(void)
 {
-    char c;
+    int n;
 
-    c = '0';
-    printf("%c: %d\n", c, _isdigit(c));
-    c = 'a';
-    printf("%c: %d\n", c, _isdigit(c));
+    n = add(89, 9);
+    printf("%d\n", n);
     return (0);
 }
