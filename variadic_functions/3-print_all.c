@@ -34,18 +34,20 @@ frm f[] = {
 {'i', print_int},
 {'f', print_float},
 {'s', print_string},
-{'\0', NULL}};
+{'\0', NULL}
+};
 const char *separator = "";
-int i, j;
+int i = 0, j = 0;
 va_list arg;
 va_start(arg, format);
 if (format == NULL)
 {
-	return;
+return;
 }
-for (i = 0; format[i] != '\0'; ++i)
+while (format[i] != '\0')
 {
-for (j = 0; f[j].h; j++)
+j = 0;
+while (f[j].h)
 {
 if (f[j].h == format[i])
 {
@@ -54,7 +56,9 @@ f[j].print(&arg);
 separator = ", ";
 break;
 }
+j++;
 }
+i++;
 }
 printf("\n");
 va_end(arg);
