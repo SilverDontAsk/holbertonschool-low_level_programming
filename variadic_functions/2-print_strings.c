@@ -16,13 +16,13 @@ va_start(s, n);
 for (i = 0; i < n; i++)
 {
 strin = va_arg(s, const char *);
-if (strin != NULL)
-{
-printf("%s", strin);
 if (strin == NULL)
 {
 printf("(nil)");
 }
+if (strin != NULL)
+{
+printf("%s", strin);
 if (i < n - 1 && separator != NULL)
 {
 printf("%s", separator);
