@@ -1,20 +1,36 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
-typedef struct formatter {
-char h;
-void (*print)(va_list*);
-} frm;
-void print_char(va_list *arg) {
+/**
+ * print_char - print char argument
+ * @arg: argument list
+ */
+void print_char(va_list *arg)
+{
 printf("%c", va_arg(*arg, int));
 }
-void print_int(va_list *arg) {
+/**
+ * print_int - print an integer
+ * @arg: argument list
+ */
+void print_int(va_list *arg)
+{
 printf("%d", va_arg(*arg, int));
 }
-void print_float(va_list *arg) {
+/**
+ * print_float - print a float argument
+ * @arg: argument list
+ */
+void print_float(va_list *arg)
+{
 printf("%f", va_arg(*arg, double));
 }
-void print_string(va_list *arg) {
+/**
+ * print_string - prints a string
+ * @arg: argument list
+ */
+void print_string(va_list *arg)
+{
 char *h = va_arg(*arg, char *);
 (h == NULL) ? printf("(nil)") : printf("%s", h);
 }
@@ -25,37 +41,32 @@ char *h = va_arg(*arg, char *);
  */
 void print_all(const char * const format, ...)
 {
-frm f[] = {
-{'c', print_char},
-{'i', print_int},
-{'f', print_float},
-{'s', print_string},
-{'\0', NULL}
+void (*print_functions[4])(va_list) = {print_char, print_int,
+print_float,
+print_string
 };
 const char *separator = "";
 int i = 0, j = 0;
 va_list arg;
-char cspec;
 va_start(arg, format);
-if (!format)
+if (format == NULL)
 {
 printf("\n");
+va_end(arg);
 return;
 }
-while ((cspec = format[i++]))
+while (format[i])
 {
+char cspec = format[i];
 switch (cspec)
 {
-case 'c':
-case 'i':
-case 'f':
-case 's':
-while (f[j].h)
+case 'c': case 'i': case 'f': case 's':
+while (j < 4)
 {
-if (f[j].h == cspec)
+if (cspec == "cifs"[j])
 {
 printf("%s", separator);
-f[j].print(&arg);
+print_functions[j](arg);
 separator = ", ";
 break;
 }
@@ -66,6 +77,7 @@ break;
 default:
 break;
 }
+i++;
 }
 printf("\n");
 va_end(arg);
