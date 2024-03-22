@@ -50,6 +50,7 @@ case 'i':
 case 'f':
 case 's':
 {
+j = 0;
 while (f[j].h)
 {
 if (f[j].h == cspec)
