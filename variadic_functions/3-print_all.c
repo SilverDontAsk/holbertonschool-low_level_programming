@@ -39,17 +39,20 @@ frm f[] = {
 const char *separator = "";
 int i = 0, j = 0;
 va_list arg;
+char cspec;
 va_start(arg, format);
-if (format == NULL)
+while ((cspec = format[i++]))
 {
-return;
-}
-while (format[i] != '\0')
+switch (cspec)
 {
-j = 0;
+case 'c':
+case 'i':
+case 'f':
+case 's':
+{
 while (f[j].h)
 {
-if (f[j].h == format[i])
+if (f[j].h == cspec)
 {
 printf("%s", separator);
 f[j].print(&arg);
@@ -58,7 +61,11 @@ break;
 }
 j++;
 }
-i++;
+break;
+}
+default:
+break;
+}
 }
 printf("\n");
 va_end(arg);
