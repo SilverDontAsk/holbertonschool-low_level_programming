@@ -5,33 +5,33 @@
  * print_char - print char argument
  * @arg: argument list
  */
-void print_char(va_list *arg)
+void print_char(va_list arg)
 {
-printf("%c", va_arg(*arg, int));
+printf("%c", va_arg(arg, int));
 }
 /**
  * print_int - print an integer
  * @arg: argument list
  */
-void print_int(va_list *arg)
+void print_int(va_list arg)
 {
-printf("%d", va_arg(*arg, int));
+printf("%d", va_arg(arg, int));
 }
 /**
  * print_float - print a float argument
  * @arg: argument list
  */
-void print_float(va_list *arg)
+void print_float(va_list arg)
 {
-printf("%f", va_arg(*arg, double));
+printf("%f", va_arg(arg, double));
 }
 /**
  * print_string - prints a string
  * @arg: argument list
  */
-void print_string(va_list *arg)
+void print_string(va_list arg)
 {
-char *h = va_arg(*arg, char *);
+char *h = va_arg(arg, char *);
 (h == NULL) ? printf("(nil)") : printf("%s", h);
 }
 /**
