@@ -16,11 +16,7 @@ printf("%f", va_arg(*arg, double));
 }
 void print_string(va_list *arg) {
 char *h = va_arg(*arg, char *);
-if (h == NULL) {
-printf("(nil)");
-return;
-}
-printf("%s", h);
+(h == NULL) ? printf("(nil)") : printf("%s", h);
 }
 /**
  * print_all - prints anything
@@ -41,6 +37,11 @@ int i = 0, j = 0;
 va_list arg;
 char cspec;
 va_start(arg, format);
+if (!format)
+{
+printf("\n");
+return;
+}
 while ((cspec = format[i++]))
 {
 switch (cspec)
@@ -49,8 +50,6 @@ case 'c':
 case 'i':
 case 'f':
 case 's':
-{
-j = 0;
 while (f[j].h)
 {
 if (f[j].h == cspec)
@@ -62,8 +61,8 @@ break;
 }
 j++;
 }
+j = 0;
 break;
-}
 default:
 break;
 }
