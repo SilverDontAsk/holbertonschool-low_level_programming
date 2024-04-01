@@ -19,7 +19,7 @@ return (NULL);
 }
 len = 0;
 ptr = str;
-while(*ptr != '\0')
+while (*ptr != '\0')
 {
 	len++;
 	ptr++;
