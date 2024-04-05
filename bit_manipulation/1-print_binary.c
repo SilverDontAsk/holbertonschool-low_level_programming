@@ -10,17 +10,17 @@ int f = 1;
 unsigned long int b = 1UL << (sizeof(n) * 8 - 1);
 if (n == 0)
 {
-	_putchar('0');
-	return;
+_putchar('0');
+return;
 }
 while ((b & n) == 0)
 {
-	b >>= 1;
-	f++;
+b >>= 1;
+f++;
 }
 while (b != 0)
 {
-	_putchar((n & b) ? '1' : '0');
-	b >>= 1;
+_putchar((n & b) ? '1' : '0');
+b >>= 1;
 }
 }
