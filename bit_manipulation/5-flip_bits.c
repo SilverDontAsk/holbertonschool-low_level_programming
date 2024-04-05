@@ -18,7 +18,7 @@ d >>= 1;
 }
 if (n == ULONG_MAX && m == 0)
 {
-return sizeof(unsigned long int) * CHAR_BIT;
+return (sizeof(unsigned long int) * CHAR_BIT);
 }
 return (c);
 }
