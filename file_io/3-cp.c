@@ -84,6 +84,5 @@ if (argc != 3)
 p_error_and_exit(97, "Usage: %s file_from file_to", argv[0]);
 }
 copy_file(file_from, file_to);
-printf("File copied successfully.\n");
 return (0);
 }
