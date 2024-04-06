@@ -24,7 +24,6 @@ if (fildesc == -1)
 {
 return (-1);
 }
-fchmod(fildesc, S_IRUSR | S_IWUSR);
 if (text_content != NULL)
 {
 bytes_written = write(fildesc, text_content, len);
